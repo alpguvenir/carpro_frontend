@@ -1,0 +1,48 @@
+  <!--
+  {{}} string interpolation
+  -->
+
+<h1>Hello {{name}}</h1>
+
+
+<ul>
+  <li>Age: {{age}}</li>
+</ul>
+
+<button (click)="onClick()">Press here...</button>
+
+<form (submit)="addCar(car.value)">
+  <div>
+    <label for="car">Add:</label>
+    <input type="text" #car>
+  </div>
+</form>
+
+<p>
+  Update
+</p>
+
+  <form>
+    <div>
+      <label for="name">Name:</label><br>
+      <input type="text" [(ngModel)]="name" name="name">
+    </div>
+    <div>
+      <label for="age">Age:</label><br>
+      <input type="number"[(ngModel)]="age" name="age">
+    </div>
+  </form>
+
+
+
+  <ul>
+    <!-- The word 'cindex' needs to match in the loop
+    The word 'cars' needs to match with the array
+    defined in the user.component.ts file.
+    *index is a reserved word for holding index in a loop* -->
+    <li *ngFor="let car of cars; let i = index">
+      {{i + 1}}.  {{car}}
+      <button (click)="deleteCar(car)">X</button>
+    </li>
+  </ul>
+
