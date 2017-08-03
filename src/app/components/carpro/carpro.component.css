@@ -34,7 +34,7 @@ button{
   border-style: ridge;
 }
 .pre-scrollable {
-  max-height: 500px;
+  max-height: 450px;
   overflow-y: scroll;
 }
 content {
