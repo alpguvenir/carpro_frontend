@@ -6,17 +6,17 @@ import { HttpModule } from '@angular/http';
 import { DataService } from './services/data.service';
 
 import { AppComponent } from './app.component';
-import { UserComponent } from './components/user/user.component';
+import { UserComponent } from './components/carpro/carpro.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserComponent
+    UserComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
   ],
   // services will go to providers
   providers: [DataService],

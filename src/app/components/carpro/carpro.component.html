@@ -1,0 +1,79 @@
+  <!--
+  {{}} string interpolation
+  -->
+
+<h1 class="text-center">Welcome to Carpros management system</h1>
+
+  <br>
+
+<div class="text-left">
+  <button  class="btn btn-primary btn-lg" (click)="onClick()">Click here to toggle the carpros...</button>
+</div>
+
+<div style="text-align: center" class="col-sm-3 text-left">
+  <div class="pre-scrollable" *ngIf="toggleGet">
+    <h1 style="text-align: left">Carpro objects</h1>
+    <div *ngFor = "let carpro of carpros">
+      <p id="idLabel">ID: {{carpro.id}}</p>
+      <p>BRAND: {{carpro.brand}}</p>
+      <p>YEAR ESTABLISHED: {{carpro.yearEstablished}}</p>
+      <hr style="height: 1px; background-color:black;"/>
+    </div>
+  </div>
+</div>
+  <!--
+<form (submit)="addCar(car.value)">
+  <div>
+    <label for="car">Add:</label>
+    <input type="text" #car>
+  </div>
+</form>
+-->
+
+<div class="col-sm-3">
+<p class="lead">Add</p>
+
+  <form>
+    <div>
+      <label>Brand:</label><br>
+      <input type="text" #brand>
+    </div>
+    <div>
+      <label>Year Established:</label><br>
+      <input type="number" #yearEstablished>
+    </div>
+    <button class="btn btn-default" (click)="addCar2(brand.value, yearEstablished.value);">Add car to db</button>
+  </form>
+</div>
+
+<div class="col-sm-3">
+  <p class="lead">Update</p>
+
+
+</div>
+
+<div class="col-sm-3">
+  <p class="lead">Delete</p>
+  <form>
+    <div>
+      <label>ID:</label><br>
+      <input type="number" #id>
+    </div>
+    <button class="btn btn-default" (click)="deleteCar(id.value);">Delete car from db</button>
+  </form>
+
+
+  <!--
+    <ul>
+    <!-- The word 'cindex' needs to match in the loop
+    The word 'cars' needs to match with the array
+    defined in the carpro.component.ts file.
+    *index is a reserved word for holding index in a loop*
+    <li *ngFor="let car of cars; let i = index">
+      {{i + 1}}.  {{car}}
+      <button (click)="deleteCar(car)">X</button>
+    </li>
+  </ul>
+  -->
+</div>
+
