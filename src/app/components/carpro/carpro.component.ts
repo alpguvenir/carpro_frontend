@@ -58,12 +58,23 @@ export class UserComponent implements OnInit {
   }
   */
 
-  addCar2(brand, yearEstablished) {
-
+  addCar(brand, yearEstablished) {
     console.log(brand);
     console.log(yearEstablished);
     const obj1 = new Carpro(0, brand, yearEstablished);
-    this.dataService.postCarpros(obj1).subscribe();
+    this.dataService.addCarpros(obj1).subscribe();
+    this.onClick();
+    this.onClick();
+    return false;
+  }
+
+  updateCar(id, brand, yearEstablished) {
+    console.log(brand);
+    console.log(yearEstablished);
+    const obj1 = new Carpro(0, brand, yearEstablished);
+    this.dataService.updateCarpros(obj1, id).subscribe();
+    console.log(id);
+    console.log(obj1);
     this.onClick();
     this.onClick();
     return false;
