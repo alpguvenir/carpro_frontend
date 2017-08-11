@@ -1,10 +1,10 @@
-  <!--
-  {{}} string interpolation
-  -->
+<!--
+{{}} string interpolation
+-->
 
-  <h1 class="text-center" xmlns="http://www.w3.org/1999/html">Welcome to Carpros management system</h1>
+<h1 class="text-center" xmlns="http://www.w3.org/1999/html">Welcome to Carpros management system</h1>
 
-  <br>
+<br>
 
 <div class="text-left">
   <button  class="btn btn-primary btn-lg" (click)="onClick()">Click here to toggle the carpros...</button>
@@ -21,38 +21,38 @@
     </div>
   </div>
 </div>
-  <!--
+<!--
 <form (submit)="addCar(car.value)">
-  <div>
-    <label for="car">Add:</label>
-    <input type="text" #car>
-  </div>
+<div>
+  <label for="car">Add:</label>
+  <input type="text" #car>
+</div>
 </form>
 -->
 
-  <div class="col-sm-3">
-    <p class="lead">Update</p>
+<div class="col-sm-3">
+  <p class="lead">Update</p>
 
-    <form>
-      <div>
-        <label>ID:</label><br>
-        <input type="number" #u_id>
-      </div>
-      <div>
-        <label>Brand:</label><br>
-        <input type="text" #u_brand>
-      </div>
-      <div>
-        <label>Year Established:</label><br>
-        <input type="number" #u_yearEstablished>
-      </div>
-      <button class="btn btn-default" (click)="updateCar(u_id.value, u_brand.value, u_yearEstablished.value);">Update car</button>
-    </form>
-  </div>
+  <form>
+    <div>
+      <label>ID:</label><br>
+      <input type="number" #u_id>
+    </div>
+    <div>
+      <label>Brand:</label><br>
+      <input type="text" #u_brand>
+    </div>
+    <div>
+      <label>Year Established:</label><br>
+      <input type="number" #u_yearEstablished>
+    </div>
+    <button class="btn btn-default" (click)="updateCar(u_id.value, u_brand.value, u_yearEstablished.value);">Update car</button>
+  </form>
+</div>
 
 
 <div class="col-sm-3">
-<p class="lead">Add</p>
+  <p class="lead">Add</p>
 
   <form>
     <div>
