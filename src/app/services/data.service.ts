@@ -15,7 +15,7 @@ export class DataService {
   getCarpros() {
     const headers = new Headers({ 'Content-Type': 'application/json' });
     const options = new RequestOptions({ headers: headers });
-    return this.http.get('https://carpro.herokuapp.com/cars', options)
+    return this.http.get('https://carpro-backend.herokuapp.com/cars', options)
       .map(res => res.json());
   }
 
@@ -23,21 +23,21 @@ export class DataService {
     const headers = new Headers({ 'Content-Type': 'application/json' })
     const options = new RequestOptions({ headers: headers });
     console.log(carpro);
-    return this.http.post('https://carpro.herokuapp.com/cars', carpro, options)
+    return this.http.post('https://carpro-backend.herokuapp.com/cars', carpro, options)
       .map(res => res.json());
   }
 
   updateCarpros(carpro: Carpro, id: number) {
     const headers = new Headers({ 'Content-Type': 'application/json' })
     const options = new RequestOptions({ headers: headers });
-    return this.http.put(('https://carpro.herokuapp.com/cars/' + id), carpro)
+    return this.http.put(('https://carpro-backend.herokuapp.com/cars/' + id), carpro)
       .map(res => res.json());
   }
 
   deleteCarpros(id: number) {
     const headers = new Headers({ 'Content-Type': 'application/json' });
     const options = new RequestOptions({ headers: headers });
-    return this.http.delete(('https://carpro.herokuapp.com/cars/' + id), options);
+    return this.http.delete(('https://carpro-backend.herokuapp.com/cars/' + id), options);
   }
 
 }
